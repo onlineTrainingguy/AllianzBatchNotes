@@ -82,4 +82,39 @@ Main branch history
    37  git checkout dev2
    38  git merge main
    39  git push origin dev2
+ 41  git checkout dev1
+   42  ls
+   43  echo "This changes is done by dev1" > dao.java
+   44  git status
+   45  git add .
+   46  git commit -m "dao.java file is modified by dev1"
+   47  cat dao.java
+   48  git checkout dev2
+   49  cat dao.java
+   50  echo "this change is done by dev2" > dao.java
+   51  git status
+   52  git add .
+   53  git commit -m "dao.java file is modified by dev2"
+   54  cat dao.java
+   55  git checkout main
+   56  git merge dev1
+   57  git merge dev2
+   58  git mergetool
+   59  git mergetool --tool vimdiff
+   60  ls
+   61  git status
+   62  rm dao_*.*
+   63  git status
+   64  rm dao.java.orig
+   65  git status
+   66  cat dao.java
+   67  git commit -m "merge conflict is resolved"
+   68  git checkout dev1
+   69  cat dao.java
+   70  git merge main
+   71  cat dao.java
+   72  git checkout dev2
+   73  cat dao.java
+   74  git merge main
+   75  cat dao.java
 
