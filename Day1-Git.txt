@@ -1,0 +1,116 @@
+ 8  mkdir BankingProj
+    9  cd BankingProj/
+   10  whoami
+   11  ls /root
+   12  ls -la /root
+   13  git config --global user.name globaluser
+   14  ls -la /root
+   15  cat /root/.gitconfig
+   16  git config --global user.email globaluser@gmail.com
+   17  cat /root/.gitconfig
+   18  git init
+   19  ls -la
+   20  ls .git/
+   21  touch pl.java bal.java dao.java
+   22  git status
+   23  git add bal.java
+   24  git status
+   25  git rm --cached bal.java
+   26  git status
+   27  git add .
+   28  git status
+   43  git commit -m "bal.java file is added" bal.java
+   44  git status
+   45  git log
+ 47  ls
+   48  git log
+   49  ls .git/objects/
+   50  ls .git/objects/2e/
+   51  ls .git
+   52  cat .git/config
+   53  git config --local user.name localuser
+   54  cat .git/config
+   55  git status
+   56  git commit -m "dao.java and pl.java file is added"
+   57  git status
+   58  git log
+   59  git log --oneline
+   60  git remote add origin https://github.com/onlineTrainingguy/BankingProj.git
+   61  cat .git/config
+   62  git branch -M main
+   63  git branch
+   64  git push -u origin main
+   65  git log --oneline
+   66  ssh-keygen
+   67  cat /root/.ssh/id_rsa.pub
+   68  cat .git/config
+   69  git remote set-url origin git@github.com:onlineTrainingguy/BankingProj.git
+   70  cat .git/config
+   71  touch unitest.java
+   72  git status
+   73  git add .
+   74  git commit -m "unitest.java file is added"
+   75  git push origin main
+   76  history
+
+ 77  git fetch
+   78  ls
+   79  git merge origin/main
+   80  ls
+   81  git log --oneline
+   82  git pull origin main
+   83  ls
+   84  touch 1.exe 2.exe 3.jar 4.war 5.jar tmp.java
+   85  git status
+   86  vi .gitignore
+   87  git status
+   88  vi .gitignore
+   89  git status
+   90  ls
+   91  rm *.exe *.jar *.war tmp.java .gitignore
+   92  ls
+   93  touch tmp.java
+   94  git status
+   95  git add .
+   96  git commit -m "tmp.java file is added"
+   97  git log --oneline
+   98  git reset --mixed HEAD~1
+   99  git log --oneline
+  100  ls
+  101  git status
+  102  git add .
+  103  git commit -m "tmp.java file is added"
+  104  git status
+  105  git log --oneline
+  106  git reset --soft HEAD~1
+  107  git status
+  108  git log --oneline
+  109  git commit -m "tmp.java file is added"
+  110  git log --oneline
+  111  git reset --hard HEAD~1
+  112  git status
+  113  ls
+  114  git log --oneline
+  115  git status
+ 
+ 
+  156  touch tmp.java
+  157  git add .
+  158  git commit -m "tmp.java file is added"
+  159  git log --oneline
+  160  echo "new line is added" > tmp.java
+  161  git status
+  162  git add .
+  163  git commit -m "tmp.java file is modified"
+  164  git status
+  165  git log --oneline
+  166  git diff d2fb7ea 79cd4d6
+  167  git revert d2fb7ea
+  168  git log --oneline
+  169  git status
+  170  cat tmp.java
+  171  git revert 25eb026
+  172  git log --oneline
+  173  cat tmp.java
+  174  history
+
