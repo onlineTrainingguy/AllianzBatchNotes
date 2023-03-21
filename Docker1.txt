@@ -1,0 +1,9 @@
+ 1  docker --version
+    2  apt update && apt install docker.io -y
+    3  docker --version
+    4  docker --help
+    5  docker ps
+    6  docker container ls
+    7  docker container --help
+    8  docker container ls --help
+    9  history
