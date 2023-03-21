@@ -1,0 +1,85 @@
+Dev2 machine history
+
+ 1  git --version
+    2  git config --global user.name dev2
+    3  git config --global user.email dev2@gmail.com
+     9  git clone -b dev2 https://github.com/onlineTrainingguy/BankingProj.git
+   10  cd BankingProj/
+   11  git branch
+   12  ls
+   13  touch dev2.java
+   14  git status
+   15  git add .
+   16  git commit -m "dev2.java file is added"
+   17  git status
+   18  git log --oneline
+   19  git push origin dev2
+   20  ls
+   21  git pull origin dev2
+   22  ls
+   23  hostname node3
+   24  bash
+
+Dev1 machine history
+1  git version
+    2  git config --global user.name node2user
+    3  git config --global user.email node2@gmail.com
+    4  git config --global user.name dev1
+    5  git clone -b dev1 https://github.com/onlineTrainingguy/BankingProj.git
+    6  ls
+    7  cd BankingProj/
+    8  ls
+    9  git log --oneline
+   10  git branch
+   11  touch dev1.java
+   12  git status
+   13  git add .
+   14  git commit -m "dev1.java file is added"
+   15  git log --oneline
+   16  git push origin dev1
+   17  git pull origin dev1
+   18  ls
+   19  hostname node2
+   20  bash
+
+Main branch history
+ 1  git branch
+    2  git branch dev1
+    3  git branch
+    4  git branch dev2
+    5  git branch
+    6  git checkout dev1
+    7  git branch
+    8  git checkout -
+    9  git branch -D dev1
+   10  git branch
+   11  git branch dev1
+   12  git branch
+   13  git push origin dev1
+   14  git push origin dev2
+   15  ls
+   16  git log --oneline
+   17  git checkout dev1
+   18  git log --oneline
+   19  git branch
+   20  git checkout main
+   21  git pull origin main
+   22  git checkout -
+   23  git pull origin dev1
+   24  ls
+   25  git checkout dev2
+   26  git pull origin dev2
+   27  git branch
+   28  git checkout main
+   29  git merge dev1
+   30  git merge dev2
+   31  git log --oneline
+   32  git checkout dev1
+   33  git merge main
+   34  ls
+   35  git push origin dev2
+   36  git push origin dev1
+   37  git checkout dev2
+   38  git merge main
+   39  git push origin dev2
+
