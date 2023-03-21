@@ -1,0 +1,43 @@
+  1  apt install maven -y
+    2  mvn --version
+    3  ls
+    4  rm -ifr BankingProj/ tagsexample/ tmpdir/
+    5  ls
+    6  cd myproj/
+    7  apt install tree
+    8  tree
+    9  cat src/main/java/com/raman/App.java
+   10  cat src/test/java/com/raman/AppTest.java
+   11  ls
+   12  cat pom.xml
+   13  ls
+   14  mvn compile
+   15  ls
+   16  ls target/
+   17  ls
+   18  mvn clean
+   19  ls
+   20  mvn clean compile
+   21  ls
+   22  vi src/main/java/com/raman/App.java
+   23  mvn clean compile
+   24  vi src/main/java/com/raman/App.java
+   25  mvn clean compile
+   26  cat src/test/java/com/raman/AppTest.java
+   27  mvn clean test
+   28  ls
+   29  ls target/
+   30  ls target/surefire-reports
+   31  cat target/surefire-reports/com.raman.AppTest.txt
+   32  vi src/test/java/com/raman/AppTest.java
+   33  mvn clean package
+   34  mvn clean test
+   35  vi src/test/java/com/raman/AppTest.java
+   36  mvn clean test
+   37  ls target/
+   38  mvn clean package
+   39  ls target/
+   40  java -cp target/myproj-1.0-SNAPSHOT.jar com.raman.App
+   41  vi src/test/java/com/raman/AppTest.java
+   42  mvn clean package
+   43  ls target/
