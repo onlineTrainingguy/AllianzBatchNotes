@@ -1,0 +1,55 @@
+  1  docker ps -a
+    2  docker rm -f c2
+    3  ip a
+    4  docker container run -it --name c1 -d centos
+    5  docker inspect c1
+    6  docker container run -it --name c2 -d centos
+    7  docker inspect c2
+    8  docker exec -it c1 bash
+    9  docker rm -f c1 c2
+   10  docker network --help
+   11  docker network ls
+   12  docker network create -d bridge br1 --subnet 192.168.0.0/16 --gateway 192.168.0.1
+   13  docker network ls
+   14  docker network inspect br1
+   15  docker container run -it --name c1 --network br1 -d centos
+   16  docker inspect c1
+   17  docker container run -it --name c2 --network br1 -d centos
+   18  docker inspect c2
+   19  docker exec -it c1 bash
+   20  docker rm -f c1 c2
+   21  docker network rm br1
+   22  docker network ls
+   23  docker container run -it --name h1 --network host -d nginx
+   24  docker inspect h1
+   25  docker network ls
+   26  docker rm -f h1
+   27  docker container run -it --name n1 --network none -d cetnos
+   28  docker container run -it --name n1 --network none -d centos
+   29  docker inspect n1
+   30  docker exec -it n1 bash
+   31  docker network disconnet none n1
+   32  docker network disconnect none n1
+   33  docker network connect bridge n1
+   34  docker inspect n1
+   35  ip a
+   36  docker rm -f n1
+   37  sudo curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+   38  chmod +x /usr/local/bin/docker-compose
+   39  docker-compose --version
+   40  vi docker-compose.yaml
+   41  docker ps -a
+   42  docker-compose up -d
+   43  docker ps
+   44  docker network ls
+   45  docker-compose scale db=3
+   46  docker ps
+   47  docker-compose scale db=1
+   48  docker ps
+   49  docker volume ls
+   50  docker-compose down
+   51  docker ps
+   52  docker network ls
+   53  docker volume ls
+   54  docker volume prune
+   55  history
