@@ -1,0 +1,88 @@
+
+
+
+  189  docker --version
+  190  docker images
+  191  docker image ls
+  192  docker pull ubuntu
+  193  docker image ls
+  194  docker pull ubuntu:18.04
+  195  docker image ls
+  196  docker pull openjdk
+  197  docker image ls
+  198  docker container run -it ubuntu
+  199  docker container ls -a
+  200  docker container run -it -d ubuntu
+  201  docker container ls -a
+  202  docker container --help
+  203  docker container ls
+  204  docker container rename d2191a1371cd c1
+  205  docker container ls
+  206  docker container run -it --name c2 -d centos
+  207  docker image ls
+  208  docker container ls
+  209  docker container run -it --name tagcontainer -d ubuntu:18.04
+  210  docker container ls
+  211  docker container ls -a
+  212  docker container stop c2
+  213  docker container ls -a
+  214  docker ps
+  215  docker ps -a
+  216  docker container ls -a
+  217  docker start c2
+  218  docker container ls -a
+  219  docker restart c2
+  220  docker ps -a
+  221  docker container pause c2
+  222  docker container ls
+  223  docker container unpause c2
+  224  docker container ls
+  225  docker container kill c2
+  226  docker container ls -a
+  227  docker pull nginx
+  228  docker images
+  229  docker container run -it --name web -d nginx
+  230  docker container ls
+  231  docker stats web
+  232  docker container run -it --name web1 -m 8m -d nginx
+  233  docker inspect web1
+  234  docker inspect web1 | grep Memory
+  235  docker stats web1
+  236  docker container update -m 16m web1
+  237  docker stats web1
+  238  docker container run -it --name web2 -c 410 -d nginx
+  239  docker inspect web2 | grep Cpu
+  240  docker container top web
+  241  docker exec -it web bash
+  242  docker ps -a
+  243  docker rm 9f343f1cfc8a
+  244  docker ps -a
+  245  docker rm web2
+  246  docker rm -f web2
+  247  docker ps -a
+  248  docker rm -f $(docker ps -a -q)
+  249  docker ps -a
+  250  docker images
+  251  docker rmi ubuntu:18.04
+  252  docker images
+  253  docker rmi $(docker images -q)
+  254  docker images
+  255  docker container run -it --name web -p 80:80 -d ubuntu
+  256  docker ps -a
+  257  docker exec -it web bash
+-------------Commands inside the container
+ 1  apt update
+    2  apt install apache2 -y
+    3  service apache2 status
+    4  service apache2 start
+    5  ls /var/www/html/
+    6  exit
+    7  ls /var/www/html/
+    8  cat /var/www/html/test.html
+    9  history
+
+  258  echo "<h1>This is super cool html file </h1>" > test.html
+  259  cat test.html
+  260  docker cp test.html web:/var/www/html
+  261  docker exec -it web bash
+  262  history
