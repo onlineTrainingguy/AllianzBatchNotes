@@ -1,0 +1,95 @@
+  1  ls
+    2  rm myimg.tar
+    3  vi Dockerfile
+    4  docker images
+    5  docker ps
+    6  docker rm -f local_registry
+    7  docker rmi localhost:5000/myubuntu
+    8  docker images
+    9  docker rmi registry
+   10  docker images
+   11  ls
+   12  docker build . -t webimg
+   13  docker images
+   14  docker ps -a
+   15  docker container run -it --name web -p 80:80 -d webimg
+   16  docker exec -it web bash
+   17  docker ps
+   18  vi Dockerfile
+   19  docker build . -t img1
+   20  docker image ls
+   21  docker container run -it --name c1 -d img1
+   22  docker exec -it c1 bash
+   23  touch myfiles  myfile2
+   24  ls
+   25  wget https://mirrors.estointernet.in/apache/maven/maven-3/3.6.3/source/apache-maven-3.6.3-src.tar.gz
+   26  ls
+   27  vi Dockerfile
+   28  docker build . -t img2
+   29  docker images
+   30  docker container run -it --name c2 -d img2
+   31  docker exec -it c2 bash
+   32  vi Dockerfile
+   33  docker build . -t img3
+   34  docker container run img3
+   35  docker container run img3 echo "Hello Devops!"
+   36  vi Dockerfile
+   37  docker build . -t img4
+   38  docker images
+   39  docker run img4
+   40  docker run img4 echo "Hello DevOps!"
+   41  git clone https://github.com/onlineTrainingguy/jenkinscicd.git
+   42  cd jenkinscicd/
+   43  ls
+   44  vi Dockerfile
+   45  docker build . -t mvnimg
+   46  docker images
+   47  vi Dockerfile
+   48  docker run mvnimg
+   49  vi Dockerfile
+   50  docker build . -t javaimg
+   51  docker images
+   52  docker run javaimg
+   53  docker rm -f $(docker ps -a -q)
+   54  docker rmi -f $(docker images -q)
+   55  docker images
+   56  docker container run -it --name c1 -d ubuntu
+   57  docker exec -it c1 bash
+   58  docker stop c1
+   59  docker start c1
+   60  docker exec -it c1 bash
+   61  docker rm -f c1
+   62  docker container run -it --name c1 --mount --type=tmpfs,destination=/test -d ubuntu
+   63  docker container run -it --name c1 --mount type=tmpfs,destination=/test -d ubuntu
+   64  docker exec c1 bash
+   65  docker exec -it c1 bash
+   66  docker stop c1
+   67  docker inspect c1
+   68  docker start c1
+   69  docker exec -it c1 bash
+   70  docker rm -f c1
+   71  ls /var/lib/docker/
+   72  ls /var/lib/docker/volumes/
+   73  docker volume prune
+   74  ls /var/lib/docker/volumes/
+   75  docker volume --help
+   76  docker volume create demo-vol
+   77  ls /var/lib/docker/volumes/
+   78  ls /var/lib/docker/volumes/demo-vol/
+   79  ls /var/lib/docker/volumes/demo-vol/_data/
+   80  docker container run -it --name c2 --mount source=demo-vol,destination=/demo -d ubuntu
+   81  docker exec -it c2 bash
+   82  ls /var/lib/docker/volumes/demo-vol/_data/
+   83  docker inspect c2
+   84  docker rm -f c2
+   85  ls /var/lib/docker/volumes/demo-vol/_data/
+   86  docker container run -it --name c2 --mount source=demo-vol,destination=/demo -d centos
+   87  docker exec -it c2 bash
+   88  cd ..
+   89  mkdir mydir
+   90  docker container run -it --name c3 -v /home/ubuntu/mydir:/demo -d centos
+   91  docker exec -it c3 bash
+   92  ls mydir/
+   93  docker rm -f c3
+   94  ls mydir/
+   95  history
