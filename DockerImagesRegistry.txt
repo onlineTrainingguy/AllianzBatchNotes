@@ -1,0 +1,40 @@
+  1  docker container ls
+    2  docker commit web webimg
+    3  docker images
+    4  docker rm -f web
+    5  docker save webimg > myimg.tar
+    6  ls
+    7  docker images
+    8  docker rmi webimg
+    9  docker images
+   10  ls
+   11  docker load < myimg.tar
+   12  docker images
+   13  docker image tag webimg ramansharma95/webimg
+   14  docker images
+   15  docker login
+   16  docker logout
+   17  docker login
+   18  docker push ramansharma95/webimg
+   19  docker image tag webimg ramansharma95/webimg:2
+   20  docker images
+   21  docker push ramansharma95/webimg:2
+   22  docker container run -d -p 5000:5000 --name local_registry -d registry
+   23  docker ps
+   24  curl localhost:5000/v2/_catalog
+   25  docker images
+   26  docker rmi ramansharma95/webimg ramansharma95/webimg:2
+   27  docker rmi webimg
+   28  docker images
+   29  docker image tag localhost:5000/myubuntu
+   30  docker image tag ubuntu localhost:5000/myubuntu
+   31  docker push localhost:5000/myubuntu
+   32  curl localhost:5000/v2/_catalog
+   33  docker images
+   34  docker rmi ubuntu
+   35  docker rmi localhost:5000/myubuntu
+   36  docker images
+   37  docker pull localhost:5000/myubuntu
+   38  docker images
+   39  docker inspect local_registry
+   40  ls /var/lib/docker/volumes/9403301fb8f80c5d671aaeaef4104ea456d26e3d2870ed2577f3a0b27b716872/_data/docker/registry/v2/repositories/
