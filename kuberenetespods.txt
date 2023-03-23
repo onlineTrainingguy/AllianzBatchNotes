@@ -1,0 +1,47 @@
+ 15  kubectl run pod1 --image nginx
+   16  kubectl get pods
+   17  kubectl get pods -o wide
+   18  kubectl exec -it pod1 -- bash
+   19  kubectl get pods -o wide
+   20  vi pod.yaml
+    apiVersion: v1
+    kind: Pod
+    metadata:
+     name: pod1
+     labels:
+      app: nginx-app
+    spec:
+     containers:
+     - name: c1
+       image: nginx 
+   21  kubectl delete pod pod1
+   22  kubectl create -f pod.yaml
+   23  kubectl get pods
+   24  kubectl get pods -o wide
+   25  vi pod.yaml
+   26  kubectl apply -f pod.yaml
+   27  kubectl get pod -o yaml
+   28  kubectl describe pod pod1
+   29  kubectl run pod2 --image nginx --dry-run=client -o yaml
+   30  cat pod.yaml
+   31  kubectl delete -f pod.yaml
+   32  vi pod.yaml
+    apiVersion: v1
+    kind: Pod
+    metadata:
+     name: pod1
+     labels:
+      app: nginx-app
+    spec:
+     containers:
+     - name: c1
+       image: nginx 
+     - name: c2
+       image: tomcat
+
+   33  kubectl create -f pod.yaml
+   34  kubectl describe pod pod1
+   35  kubectl exec -it pod1 -c c1 -- bash
+   36  kubectl exec -it pod1 -c c2 -- bash
+   37  kubectl edit pod pod1
+   38  kubectl delete pod pod1
